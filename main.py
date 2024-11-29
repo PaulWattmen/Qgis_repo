@@ -45,7 +45,7 @@ if __name__ == "__main__":
 
 
     # Version details
-    new_version = "1.0.0"
+    new_version = "0.4"
     release_version = new_version#"1.0.0"
 
     # Step 1: Modify metadata.txt
