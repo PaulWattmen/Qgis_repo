@@ -1,5 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
 <plugins>
-  <pyqgis_plugin name="booster" version="0.2">
+  <pyqgis_plugin name="booster" version="1.0.0">
     <qgis_minimum_version>3.0.0</qgis_minimum_version>
       <download_url>https://github.com/PaulWattmen/Booster/raw/refs/heads/main/booster.zip</download_url>
   </pyqgis_plugin>
