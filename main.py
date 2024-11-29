@@ -38,7 +38,7 @@ def modify_xml(file_path, release_version):
 
 if __name__ == "__main__":
     # Paths to files and folders
-    project_folder = "/Users/Wattmen/Library/Application Support/QGIS/QGIS3/profiles/default/python/plugins/Booster"  # Change to your project folder path
+    project_folder = "/Users/Wattmen/Library/Application Support/QGIS/QGIS3/profiles/default/python/plugins/Booster-main"  # Change to your project folder path
     metadata_file = os.path.join(project_folder, "metadata.txt")
     xml_file = "./plugins.xml"
     zip_output = "./booster_release/Booster.zip"
@@ -53,8 +53,8 @@ if __name__ == "__main__":
     print(f"Updated metadata.txt with version {new_version}.")
 
     # Step 2: Zip the project folder
-    zip_project_folder(project_folder, zip_output)
-    print(f"Project folder zipped to {zip_output}.")
+    #zip_project_folder(project_folder, zip_output)
+    #print(f"Project folder zipped to {zip_output}.")
 
     # Step 3: Modify the XML file
     modify_xml(xml_file, release_version)
