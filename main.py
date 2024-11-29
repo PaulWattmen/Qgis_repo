@@ -28,13 +28,26 @@ def zip_project_folder(folder_path, output_zip):
 
 def modify_xml(file_path, release_version):
     """Modify the version attribute in the pyqgis_plugin XML element."""
-    tree = ET.parse(file_path)
-    root = tree.getroot()
 
-    # Ensure we are targeting the correct element
-    root[0].set("version",release_version)
+    with open(file_path, "r", encoding="utf-8") as file:
+        lines = file.readlines()
 
-    tree.write(file_path, encoding="utf-8", xml_declaration=True)
+    if lines[0].strip().startswith("<?xml"):
+        lines[0] = f"<?xml version='{release_version}' encoding='utf-8'?>\n"
+    if lines[2].strip().startswith("<pyqgis_plugin"):
+            lines[2] = f'<pyqgis_plugin name="Booster" version="{release_version}">'
+    print(lines)
+    with open(file_path, "w", encoding="utf-8") as file:
+        file.writelines(lines)
+
+
+    #tree = ET.parse(file_path)
+    #root = tree.getroot()
+
+
+    #root[0].set("version",release_version)
+
+    #tree.write(file_path, encoding="utf-8", xml_declaration=True)
 
 if __name__ == "__main__":
     # Paths to files and folders
@@ -45,7 +58,7 @@ if __name__ == "__main__":
 
 
     # Version details
-    new_version = "0.5"
+    new_version = "0.2"
     release_version = new_version#"1.0.0"
 
     # Step 1: Modify metadata.txt
