@@ -38,14 +38,14 @@ def modify_xml(file_path, release_version):
 
 if __name__ == "__main__":
     # Paths to files and folders
-    project_folder = "/Users/Wattmen/Library/Application Support/QGIS/QGIS3/profiles/default/python/plugins/Booster-main"  # Change to your project folder path
+    project_folder = "/Users/Wattmen/Library/Application Support/QGIS/QGIS3/profiles/default/python/plugins/Booster"  # Change to your project folder path
     metadata_file = os.path.join(project_folder, "metadata.txt")
     xml_file = "./plugins.xml"
     zip_output = "./booster_release/Booster.zip"
 
 
     # Version details
-    new_version = "0.4"
+    new_version = "0.5"
     release_version = new_version#"1.0.0"
 
     # Step 1: Modify metadata.txt
