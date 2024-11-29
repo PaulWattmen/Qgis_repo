@@ -1,6 +1,5 @@
-<?xml version='0.3' encoding='utf-8'?>
+<?xml version='0.4' encoding='utf-8'?>
 <plugins>
-<pyqgis_plugin name="Booster" version="0.3">    <download_url>https://github.com/PaulWattmen/Booster/archive/refs/heads/main.zip</download_url>
-    <file_name>Booster-main</file_name>
+<pyqgis_plugin name="Booster" version="0.4">    <file_name>Booster-main</file_name>
   </pyqgis_plugin>
 </plugins>
