@@ -35,7 +35,7 @@ def modify_xml(file_path, release_version):
     if lines[0].strip().startswith("<?xml"):
         lines[0] = f"<?xml version='{release_version}' encoding='utf-8'?>\n"
     if lines[2].strip().startswith("<pyqgis_plugin"):
-            lines[2] = f'<pyqgis_plugin name="Booster" version="{release_version}">'
+            lines[2] = f'<pyqgis_plugin name="Booster" version="{release_version}">\n'
     print(lines)
     with open(file_path, "w", encoding="utf-8") as file:
         file.writelines(lines)
@@ -58,7 +58,7 @@ if __name__ == "__main__":
 
 
     # Version details
-    new_version = "0.2"
+    new_version = "0.4"
     release_version = new_version#"1.0.0"
 
     # Step 1: Modify metadata.txt
