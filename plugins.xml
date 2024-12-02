@@ -5,4 +5,9 @@
     <qgis_minimum_version>3.0.0</qgis_minimum_version>
     <download_url>https://github.com/PaulWattmen/Booster/archive/refs/heads/main.zip</download_url>
   </pyqgis_plugin>
+<pyqgis_plugin name="jason" version="0.1">
+    <file_name>jason-main</file_name>
+    <qgis_minimum_version>3.0.0</qgis_minimum_version>
+    <download_url>https://github.com/PaulWattmen/jason/archive/refs/heads/main.zip</download_url>
+</pyqgis_plugin>
 </plugins>
